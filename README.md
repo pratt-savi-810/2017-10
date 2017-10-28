@@ -13,3 +13,10 @@ To get all the Python dependencies for the class
 		
 FYI, you may have to do `sudo xcodebuild -license` for MacOS High Sierra (I just did update), scroll through directions and type `agree` and press [return].
 
+3. Then install pandas, matplotlib
+		
+		pip install pandas
+		pip install matplotlib
+		
+		
+		
