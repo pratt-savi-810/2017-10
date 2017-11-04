@@ -1,0 +1,635 @@
+Last login: Sat Oct 28 10:29:38 on ttys002
+mbp-danny:~ danielmsheehan$ python
+Python 2.7.10 (default, Jul 15 2017, 17:16:57) 
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.31)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> mmw_albums = {
+...         "Notes from the Underground" : 1992,
+...         "It's a Jungle in Here" : 1993,
+...         "Friday Afternoon in the Universe" : 1995,
+...         "Shack-man" : 1996,
+...         "Farmer's Reserve" : 1997,
+...         "Combustication" : 1998,
+...         "Tonic" : 2000,
+...         "The Dropper" : 2000,
+...         "Electric Tonic" : 2001,
+...         "Uninvisible" : 2002,
+...         "End of the World Party (Just in Case)" : 2004,
+...         "Let's Go Everywhere" : 2014,
+...         "Zaebos: Book of Angels Volume 11" : 2008,
+...         "Radiolarians 1" : 2008,
+...         "Radiolarians 2" : 2009,
+...         "Radiolarians 3" : 2009,
+...         "Radiolarians: The Evolutionary Set" : 2009,
+...         "The Stone: Issue Four" : 2010,
+...         "20" : 2011,
+...         "Free Magic" : 2012,
+...         "Juice" : 2014,
+...     }
+>>> 
+>>> mmw_albums
+{'Tonic': 2000, "Farmer's Reserve": 1997, '20': 2011, 'Combustication': 1998, 'End of the World Party (Just in Case)': 2004, 'Juice': 2014, 'Electric Tonic': 2001, 'Notes from the Underground': 1992, 'Radiolarians 3': 2009, "Let's Go Everywhere": 2014, 'Zaebos: Book of Angels Volume 11': 2008, 'Radiolarians 2': 2009, 'Free Magic': 2012, 'The Stone: Issue Four': 2010, 'Friday Afternoon in the Universe': 1995, 'Radiolarians 1': 2008, 'Shack-man': 1996, "It's a Jungle in Here": 1993, 'Uninvisible': 2002, 'The Dropper': 2000, 'Radiolarians: The Evolutionary Set': 2009}
+>>> mmw_albums
+{'Tonic': 2000, "Farmer's Reserve": 1997, '20': 2011, 'Combustication': 1998, 'End of the World Party (Just in Case)': 2004, 'Juice': 2014, 'Electric Tonic': 2001, 'Notes from the Underground': 1992, 'Radiolarians 3': 2009, "Let's Go Everywhere": 2014, 'Zaebos: Book of Angels Volume 11': 2008, 'Radiolarians 2': 2009, 'Free Magic': 2012, 'The Stone: Issue Four': 2010, 'Friday Afternoon in the Universe': 1995, 'Radiolarians 1': 2008, 'Shack-man': 1996, "It's a Jungle in Here": 1993, 'Uninvisible': 2002, 'The Dropper': 2000, 'Radiolarians: The Evolutionary Set': 2009}
+>>> import csv
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> import csv
+>>> 
+ csv_file:pen('data/mmw_albums.csv', 'wb') as 
+  File "<stdin>", line 3
+    with open('data/mmw_albums.csv', 'wb') as csv_file:
+       ^
+SyntaxError: invalid syntaxums.csv', 'wb') as csv_file:
+>>> 
+>>>     ...     for key, value in mmw_albums.items():
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> with open('data/mmw_albums.csv','wb') as csv_file:
+...     writer = csv.writer(csv_file)
+...     for key, value in mmw_albums.items():
+...             writer.writerow([key, value])
+...             print key, value
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IOError: [Errno 2] No such file or directory: 'data/mmw_albums.csv'
+>>>             print key, value
+  File "<stdin>", line 1
+    print key, value
+    ^
+IndentationError: unexpected indent
+>>>     writer = csv.writer(csv_file)
+  File "<stdin>", line 1
+    writer = csv.writer(csv_file)
+    ^
+IndentationError: unexpected indent
+>>> 
+>>> 
+>>> 
+>>> 
+>>> exit()
+mbp-danny:~ danielmsheehan$ ls
+Applications
+Applications (Parallels)
+Automator
+Desktop
+Documents
+Downloads
+Dropbox
+GIS
+GitHub
+LANDR Bounces
+Library
+Movies
+Music
+Pictures
+Public
+get-pip.py
+my-awesome-site
+myfile.py
+pgadmin.log
+testing
+mbp-danny:~ danielmsheehan$ cd testing
+mbp-danny:testing danielmsheehan$ ls
+data		file.py
+env		readme.md
+mbp-danny:testing danielmsheehan$ python
+Python 2.7.10 (default, Jul 15 2017, 17:16:57) 
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.31)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import csv 
+>>> 
+>>> with open('data/mmw_albums.csv', 'wb') as csv_file:
+...     writer = csv.writer(csv_file)
+...     for key, value in mmw_albums.items():
+...         writer.writerow([key, value])
+...         print key, value
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+NameError: name 'mmw_albums' is not defined
+>>> mmw_albums = {
+...         "Notes from the Underground" : 1992,
+...         "It's a Jungle in Here" : 1993,
+...         "Friday Afternoon in the Universe" : 1995,
+...         "Shack-man" : 1996,
+...         "Farmer's Reserve" : 1997,
+...         "Combustication" : 1998,
+...         "Tonic" : 2000,
+...         "The Dropper" : 2000,
+...         "Electric Tonic" : 2001,
+...         "Uninvisible" : 2002,
+...         "End of the World Party (Just in Case)" : 2004,
+...         "Let's Go Everywhere" : 2014,
+...         "Zaebos: Book of Angels Volume 11" : 2008,
+...         "Radiolarians 1" : 2008,
+...         "Radiolarians 2" : 2009,
+...         "Radiolarians 3" : 2009,
+...         "Radiolarians: The Evolutionary Set" : 2009, 
+...         "The Stone: Issue Four" : 2010,
+...         "20" : 2011,
+...         "Free Magic" : 2012,
+...         "Juice" : 2014,
+...     }
+>>> 
+>>> mmw_albums
+{'Tonic': 2000, "Farmer's Reserve": 1997, '20': 2011, 'Combustication': 1998, 'End of the World Party (Just in Case)': 2004, 'Juice': 2014, 'Electric Tonic': 2001, 'Notes from the Underground': 1992, 'Radiolarians 3': 2009, "Let's Go Everywhere": 2014, 'Zaebos: Book of Angels Volume 11': 2008, 'Radiolarians 2': 2009, 'Free Magic': 2012, 'The Stone: Issue Four': 2010, 'Friday Afternoon in the Universe': 1995, 'Radiolarians 1': 2008, 'Shack-man': 1996, "It's a Jungle in Here": 1993, 'Uninvisible': 2002, 'The Dropper': 2000, 'Radiolarians: The Evolutionary Set': 2009}
+>>> import csv 
+>>> 
+>>> with open('data/mmw_albums.csv', 'wb') as csv_file:
+...     writer = csv.writer(csv_file)
+...     for key, value in mmw_albums.items():
+...         writer.writerow([key, value])
+...         print key, value
+... 
+Tonic 2000
+Farmer's Reserve 1997
+20 2011
+Combustication 1998
+End of the World Party (Just in Case) 2004
+Juice 2014
+Electric Tonic 2001
+Notes from the Underground 1992
+Radiolarians 3 2009
+Let's Go Everywhere 2014
+Zaebos: Book of Angels Volume 11 2008
+Radiolarians 2 2009
+Free Magic 2012
+The Stone: Issue Four 2010
+Friday Afternoon in the Universe 1995
+Radiolarians 1 2008
+Shack-man 1996
+It's a Jungle in Here 1993
+Uninvisible 2002
+The Dropper 2000
+Radiolarians: The Evolutionary Set 2009
+>>> import csv 
+>>> 
+>>> with open('mmw_albums.csv', 'wb') as csv_file:
+...     writer = csv.writer(csv_file)
+...     for key, value in mmw_albums.items():
+...         writer.writerow([key, value])
+...         print key, value
+... 
+Tonic 2000
+Farmer's Reserve 1997
+20 2011
+Combustication 1998
+End of the World Party (Just in Case) 2004
+Juice 2014
+Electric Tonic 2001
+Notes from the Underground 1992
+Radiolarians 3 2009
+Let's Go Everywhere 2014
+Zaebos: Book of Angels Volume 11 2008
+Radiolarians 2 2009
+Free Magic 2012
+The Stone: Issue Four 2010
+Friday Afternoon in the Universe 1995
+Radiolarians 1 2008
+Shack-man 1996
+It's a Jungle in Here 1993
+Uninvisible 2002
+The Dropper 2000
+Radiolarians: The Evolutionary Set 2009
+>>> with open('data/mmw_albums.csv') as csvfile:
+...     readCSV = csv.read(csvfile, delimiter=',')
+...     for row in readCSV:
+...             print(row[0],row[1])
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AttributeError: 'module' object has no attribute 'read'
+>>>     for row in readCSV:
+  File "<stdin>", line 1
+    for row in readCSV:
+    ^
+IndentationError: unexpected indent
+>>> 
+>>> with open('data/mmw_albums.csv') as csvfile:
+...     readCSV = csv.reader(csvfile, delimiter=',')
+...     for row in readCSV:
+...         print(row[0],row[1])
+... 
+('Tonic', '2000')
+("Farmer's Reserve", '1997')
+('20', '2011')
+('Combustication', '1998')
+('End of the World Party (Just in Case)', '2004')
+('Juice', '2014')
+('Electric Tonic', '2001')
+('Notes from the Underground', '1992')
+('Radiolarians 3', '2009')
+("Let's Go Everywhere", '2014')
+('Zaebos: Book of Angels Volume 11', '2008')
+('Radiolarians 2', '2009')
+('Free Magic', '2012')
+('The Stone: Issue Four', '2010')
+('Friday Afternoon in the Universe', '1995')
+('Radiolarians 1', '2008')
+('Shack-man', '1996')
+("It's a Jungle in Here", '1993')
+('Uninvisible', '2002')
+('The Dropper', '2000')
+('Radiolarians: The Evolutionary Set', '2009')
+>>> import pandas
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named pandas
+>>> exit()
+mbp-danny:testing danielmsheehan$ source env/bin/activate
+(env) mbp-danny:testing danielmsheehan$ python
+Python 2.7.13 (default, Sep  6 2017, 18:33:14) 
+[GCC 4.2.1 Compatible Apple LLVM 8.1.0 (clang-802.0.42)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pandas as pd
+>>> import zipfile as zp
+>>> zp.ZipFile
+<class 'zipfile.ZipFile'>
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> import pandas as pd
+>>> df = pd.read_csv('data/mmw_albums.csv'), names = ['album','year'])
+  File "<stdin>", line 1
+    df = pd.read_csv('data/mmw_albums.csv'), names = ['album','year'])
+                                                                     ^
+SyntaxError: invalid syntax
+>>> df = pd.read_csv('data/mmw_albums.csv', names = ['album','year'])
+>>> df
+                                    album  year
+0                                   Tonic  2000
+1                        Farmer's Reserve  1997
+2                                      20  2011
+3                          Combustication  1998
+4   End of the World Party (Just in Case)  2004
+5                                   Juice  2014
+6                          Electric Tonic  2001
+7              Notes from the Underground  1992
+8                          Radiolarians 3  2009
+9                     Let's Go Everywhere  2014
+10       Zaebos: Book of Angels Volume 11  2008
+11                         Radiolarians 2  2009
+12                             Free Magic  2012
+13                  The Stone: Issue Four  2010
+14       Friday Afternoon in the Universe  1995
+15                         Radiolarians 1  2008
+16                              Shack-man  1996
+17                  It's a Jungle in Here  1993
+18                            Uninvisible  2002
+19                            The Dropper  2000
+20     Radiolarians: The Evolutionary Set  2009
+>>> exit()
+(env) mbp-danny:testing danielmsheehan$ ipython
+Python 2.7.13 (default, Sep  6 2017, 18:33:14) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 5.5.0 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: import pandas as pd
+
+In [2]: df = pd.read_csv('data/mmw_albums.csv', names = 
+   ...: ["name", "year"])
+   ...: 
+
+In [3]: df
+Out[3]: 
+                                     name  year
+0                                   Tonic  2000
+1                        Farmer's Reserve  1997
+2                                      20  2011
+3                          Combustication  1998
+4   End of the World Party (Just in Case)  2004
+5                                   Juice  2014
+6                          Electric Tonic  2001
+7              Notes from the Underground  1992
+8                          Radiolarians 3  2009
+9                     Let's Go Everywhere  2014
+10       Zaebos: Book of Angels Volume 11  2008
+11                         Radiolarians 2  2009
+12                             Free Magic  2012
+13                  The Stone: Issue Four  2010
+14       Friday Afternoon in the Universe  1995
+15                         Radiolarians 1  2008
+16                              Shack-man  1996
+17                  It's a Jungle in Here  1993
+18                            Uninvisible  2002
+19                            The Dropper  2000
+20     Radiolarians: The Evolutionary Set  2009
+
+In [4]: df.T
+Out[4]: 
+         0                 1     2               3   \
+name  Tonic  Farmer's Reserve    20  Combustication   
+year   2000              1997  2011            1998   
+
+                                         4      5               6   \
+name  End of the World Party (Just in Case)  Juice  Electric Tonic   
+year                                   2004   2014            2001   
+
+                              7               8                    9   \
+name  Notes from the Underground  Radiolarians 3  Let's Go Everywhere   
+year                        1992            2009                 2014   
+
+                     ...                              11          12  \
+name                 ...                  Radiolarians 2  Free Magic   
+year                 ...                            2009        2012   
+
+                         13                                14              15  \
+name  The Stone: Issue Four  Friday Afternoon in the Universe  Radiolarians 1   
+year                   2010                              1995            2008   
+
+             16                     17           18           19  \
+name  Shack-man  It's a Jungle in Here  Uninvisible  The Dropper   
+year       1996                   1993         2002         2000   
+
+                                      20  
+name  Radiolarians: The Evolutionary Set  
+year                                2009  
+
+[2 rows x 21 columns]
+
+In [5]: import time
+
+In [6]: the_year_now = time.strftime(%Y)
+  File "<ipython-input-6-3f87b4a5e275>", line 1
+    the_year_now = time.strftime(%Y)
+                                 ^
+SyntaxError: invalid syntax
+
+
+In [7]: the_year_now = time.strftime("%Y")
+
+In [8]: the_year_now
+Out[8]: '2017'
+
+In [9]: df['how_many_years_ago_came_out']= int(the_year_
+   ...: now) - df['year']
+
+In [10]: df['year']
+Out[10]: 
+0     2000
+1     1997
+2     2011
+3     1998
+4     2004
+5     2014
+6     2001
+7     1992
+8     2009
+9     2014
+10    2008
+11    2009
+12    2012
+13    2010
+14    1995
+15    2008
+16    1996
+17    1993
+18    2002
+19    2000
+20    2009
+Name: year, dtype: int64
+
+In [11]: df
+Out[11]: 
+                                     name  year  how_many_years_ago_came_out
+0                                   Tonic  2000                           17
+1                        Farmer's Reserve  1997                           20
+2                                      20  2011                            6
+3                          Combustication  1998                           19
+4   End of the World Party (Just in Case)  2004                           13
+5                                   Juice  2014                            3
+6                          Electric Tonic  2001                           16
+7              Notes from the Underground  1992                           25
+8                          Radiolarians 3  2009                            8
+9                     Let's Go Everywhere  2014                            3
+10       Zaebos: Book of Angels Volume 11  2008                            9
+11                         Radiolarians 2  2009                            8
+12                             Free Magic  2012                            5
+13                  The Stone: Issue Four  2010                            7
+14       Friday Afternoon in the Universe  1995                           22
+15                         Radiolarians 1  2008                            9
+16                              Shack-man  1996                           21
+17                  It's a Jungle in Here  1993                           24
+18                            Uninvisible  2002                           15
+19                            The Dropper  2000                           17
+20     Radiolarians: The Evolutionary Set  2009                            8
+
+In [12]: 
+
+In [12]: df['test'] = 'some text'
+
+In [13]: df
+Out[13]: 
+                                     name  year  how_many_years_ago_came_out  \
+0                                   Tonic  2000                           17   
+1                        Farmer's Reserve  1997                           20   
+2                                      20  2011                            6   
+3                          Combustication  1998                           19   
+4   End of the World Party (Just in Case)  2004                           13   
+5                                   Juice  2014                            3   
+6                          Electric Tonic  2001                           16   
+7              Notes from the Underground  1992                           25   
+8                          Radiolarians 3  2009                            8   
+9                     Let's Go Everywhere  2014                            3   
+10       Zaebos: Book of Angels Volume 11  2008                            9   
+11                         Radiolarians 2  2009                            8   
+12                             Free Magic  2012                            5   
+13                  The Stone: Issue Four  2010                            7   
+14       Friday Afternoon in the Universe  1995                           22   
+15                         Radiolarians 1  2008                            9   
+16                              Shack-man  1996                           21   
+17                  It's a Jungle in Here  1993                           24   
+18                            Uninvisible  2002                           15   
+19                            The Dropper  2000                           17   
+20     Radiolarians: The Evolutionary Set  2009                            8   
+
+         test  
+0   some text  
+1   some text  
+2   some text  
+3   some text  
+4   some text  
+5   some text  
+6   some text  
+7   some text  
+8   some text  
+9   some text  
+10  some text  
+11  some text  
+12  some text  
+13  some text  
+14  some text  
+15  some text  
+16  some text  
+17  some text  
+18  some text  
+19  some text  
+20  some text  
+
+In [14]: df['test'] = df.index
+
+In [15]: df
+Out[15]: 
+                                     name  year  how_many_years_ago_came_out  \
+0                                   Tonic  2000                           17   
+1                        Farmer's Reserve  1997                           20   
+2                                      20  2011                            6   
+3                          Combustication  1998                           19   
+4   End of the World Party (Just in Case)  2004                           13   
+5                                   Juice  2014                            3   
+6                          Electric Tonic  2001                           16   
+7              Notes from the Underground  1992                           25   
+8                          Radiolarians 3  2009                            8   
+9                     Let's Go Everywhere  2014                            3   
+10       Zaebos: Book of Angels Volume 11  2008                            9   
+11                         Radiolarians 2  2009                            8   
+12                             Free Magic  2012                            5   
+13                  The Stone: Issue Four  2010                            7   
+14       Friday Afternoon in the Universe  1995                           22   
+15                         Radiolarians 1  2008                            9   
+16                              Shack-man  1996                           21   
+17                  It's a Jungle in Here  1993                           24   
+18                            Uninvisible  2002                           15   
+19                            The Dropper  2000                           17   
+20     Radiolarians: The Evolutionary Set  2009                            8   
+
+    test  
+0      0  
+1      1  
+2      2  
+3      3  
+4      4  
+5      5  
+6      6  
+7      7  
+8      8  
+9      9  
+10    10  
+11    11  
+12    12  
+13    13  
+14    14  
+15    15  
+16    16  
+17    17  
+18    18  
+19    19  
+20    20  
+
+In [16]: df['test2'] = df['year'] * df['test']
+
+In [17]: df
+Out[17]: 
+                                     name  year  how_many_years_ago_came_out  \
+0                                   Tonic  2000                           17   
+1                        Farmer's Reserve  1997                           20   
+2                                      20  2011                            6   
+3                          Combustication  1998                           19   
+4   End of the World Party (Just in Case)  2004                           13   
+5                                   Juice  2014                            3   
+6                          Electric Tonic  2001                           16   
+7              Notes from the Underground  1992                           25   
+8                          Radiolarians 3  2009                            8   
+9                     Let's Go Everywhere  2014                            3   
+10       Zaebos: Book of Angels Volume 11  2008                            9   
+11                         Radiolarians 2  2009                            8   
+12                             Free Magic  2012                            5   
+13                  The Stone: Issue Four  2010                            7   
+14       Friday Afternoon in the Universe  1995                           22   
+15                         Radiolarians 1  2008                            9   
+16                              Shack-man  1996                           21   
+17                  It's a Jungle in Here  1993                           24   
+18                            Uninvisible  2002                           15   
+19                            The Dropper  2000                           17   
+20     Radiolarians: The Evolutionary Set  2009                            8   
+
+    test  test2  
+0      0      0  
+1      1   1997  
+2      2   4022  
+3      3   5994  
+4      4   8016  
+5      5  10070  
+6      6  12006  
+7      7  13944  
+8      8  16072  
+9      9  18126  
+10    10  20080  
+11    11  22099  
+12    12  24144  
+13    13  26130  
+14    14  27930  
+15    15  30120  
+16    16  31936  
+17    17  33881  
+18    18  36036  
+19    19  38000  
+20    20  40180  
+
+In [18]: df.sort_values('name')
+Out[18]: 
+                                     name  year  how_many_years_ago_came_out  \
+2                                      20  2011                            6   
+3                          Combustication  1998                           19   
+6                          Electric Tonic  2001                           16   
+4   End of the World Party (Just in Case)  2004                           13   
+1                        Farmer's Reserve  1997                           20   
+12                             Free Magic  2012                            5   
+14       Friday Afternoon in the Universe  1995                           22   
+17                  It's a Jungle in Here  1993                           24   
+5                                   Juice  2014                            3   
+9                     Let's Go Everywhere  2014                            3   
+7              Notes from the Underground  1992                           25   
+15                         Radiolarians 1  2008                            9   
+11                         Radiolarians 2  2009                            8   
+8                          Radiolarians 3  2009                            8   
+20     Radiolarians: The Evolutionary Set  2009                            8   
+16                              Shack-man  1996                           21   
+19                            The Dropper  2000                           17   
+13                  The Stone: Issue Four  2010                            7   
+0                                   Tonic  2000                           17   
+18                            Uninvisible  2002                           15   
+10       Zaebos: Book of Angels Volume 11  2008                            9   
+
+    test  test2  
+2      2   4022  
+3      3   5994  
+6      6  12006  
+4      4   8016  
+1      1   1997  
+12    12  24144  
+14    14  27930  
+17    17  33881  
+5      5  10070  
+9      9  18126  
+7      7  13944  
+15    15  30120  
+11    11  22099  
+8      8  16072  
+20    20  40180  
+16    16  31936  
+19    19  38000  
+13    13  26130  
+0      0      0  
+18    18  36036  
+10    10  20080  
+
+In [19]: exit()
