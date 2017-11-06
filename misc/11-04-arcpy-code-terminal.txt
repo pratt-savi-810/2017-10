@@ -1,0 +1,207 @@
+>>> r'Y:\GitHub\pratt-savi-810-2017-10\data\nybb_17c\nybb.shp'
+'Y:\\GitHub\\pratt-savi-810-2017-10\\data\\nybb_17c\\nybb.shp'
+>>> 
+>>> 
+>>> 
+>>> 
+>>> import arcpy
+>>> inputFile = 'nybb'
+>>> inputFile
+'nybb'
+>>> outputFile = 'C:\nybb_buffer.shp'
+>>> outputFile = r'C:\nybb_buffer.shp'
+>>> arcpy.Buffer_analysis("nybb", outputFile, "10000 feet")
+<Result 'C:\\nybb_buffer.shp'>
+>>> x = [500, 1000, 10000, 100000]
+>>> x
+[500, 1000, 10000, 100000]
+>>> x
+[500, 1000, 10000, 100000]
+>>> print x
+[500, 1000, 10000, 100000]
+>>> for i in range(5):
+...     print i 
+...     
+0
+1
+2
+3
+4
+>>> for buffer in x:
+...     print buffer
+...     
+500
+1000
+10000
+100000
+>>> for buffer in x:
+...     print buffer
+...     
+500
+1000
+10000
+100000
+>>> for i in x:
+...     arcpy.Buffer_analysis("nybb", outputFile.replace('
+...     
+Parsing error SyntaxError: EOL while scanning string literal (line 2)
+>>> outputFile
+'C:\\nybb_buffer.shp'
+>>> outputFile.replace('.shp','_'+distance+'.shp;)
+Parsing error SyntaxError: EOL while scanning string literal (line 1)
+>>> outputFile.replace('.shp','_'+distance+'.shp)
+Parsing error SyntaxError: EOL while scanning string literal (line 1)
+>>> outputFile.replace('.shp','_'+distance+'.shp')
+Runtime error 
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'distance' is not defined
+>>> distance = '1000'
+>>> outputFile.replace('.shp','_'+distance+'.shp')
+'C:\\nybb_buffer_1000.shp'
+>>> for i in x:
+...     arcpy.Buffer_analysis("nybb", outputFile.replace('.shp', '_'+str(i)+'.shp')
+...     
+Parsing error SyntaxError: invalid syntax (line 3)
+>>> for i in x:
+...     arcpy.Buffer_analysis("nybb", outputFile.replace('.shp', '_'+str(i)+'.shp')
+...     
+Parsing error SyntaxError: invalid syntax (line 3)
+>>> for i in x:
+...     arcpy.Buffer_analysis("nybb", outputFile.replace('.shp', '_'+str(i)+'.shp', str(i)+' feet')
+...     
+Parsing error SyntaxError: invalid syntax (line 3)
+>>> for i in x:
+...     arcpy.Buffer_analysis("nybb", outputFile.replace('.shp', '_'+str(i)+'.shp'), str(i)+' feet')
+...     
+>>> # Replace a layer/table view name with a path to a dataset (which can be a layer file) or create the layer/table view within the script
+... # The following inputs are layers or table views: "nybb"
+... arcpy.Buffer_analysis("nybb", out_feature_class, "1000 feet")
+... 
+<Result 'C:\\Users\\DanielMSheehan\\Documents\\ArcGIS\\Default.gdb\\nybb_Buffer_TESTTEST'>
+>>> inputFile
+'nybb'
+>>> inputFile = r'Y:\GitHub\pratt-savi-810-2017-10\data\nybb_17c\nybb.shp'
+>>> def listBuffer(inputFile, outputDir, listDistances):
+... 	for i in listDistances:
+... 		bufferDist = str(i)+' feet'
+... 		outputFile = inputFile.replace('.shp', '_'+str(i)+'.shp')
+... 		arcpy.Buffer_analysis(inputFile, outputFile, bufferDist)
+... 
+>>> 
+>>> ldef listBuffer(inputFile, listDistances):
+... 	for i in listDistances:
+... 		bufferDist = str(i)+' feet'
+... 		outputFile = inputFile.replace('.shp', '_'+str(i)+'.shp')
+... 		arcpy.Buffer_analysis(inputFile, outputFile, bufferDist)
+... 
+Parsing error SyntaxError: invalid syntax (line 1)
+>>> ldef listBuffer(inputFile, listDistances):
+... 	for i in listDistances:
+... 		bufferDist = str(i)+' feet'
+... 		outputFile = inputFile.replace('.shp', '_'+str(i)+'.shp')
+... 		arcpy.Buffer_analysis(inputFile, outputFile, bufferDist)
+... 
+Parsing error SyntaxError: invalid syntax (line 1)
+>>> 
+>>> 
+>>> 
+>>> def listBuffer(inputFile, listDistances):
+... 	for i in listDistances:
+... 		bufferDist = str(i)+' feet'
+... 		outputFile = inputFile.replace('.shp', '_'+str(i)+'.shp')
+... 		arcpy.Buffer_analysis(inputFile, outputFile, bufferDist)
+... 
+>>> listBuffer(inputFile, x)
+>>> y = [1,2,700,12]
+>>> y = [1,2,700,12]
+>>> listBuffer(inputFile, y)
+>>> def listBuffer(inputFile, listDistances, distUnit):
+... 	for i in listDistances:
+... 		bufferDist = str(i)+' '+distUnit
+... 		outputFile = inputFile.replace('.shp', '_'+str(i)+'.shp')
+... 		arcpy.Buffer_analysis(inputFile, outputFile, bufferDist)
+... 
+>>> listBuffer(inputFile, y, 'kilometers')
+>>> listBuffer(inputFile, y, 'kilomefeet')
+Runtime error  Traceback (most recent call last):   File "<string>", line 1, in <module>   File "<string>", line 5, in listBuffer   File "c:\program files (x86)\arcgis\desktop10.4\arcpy\arcpy\analysis.py", line 692, in Buffer     raise e ExecuteError: ERROR 000728: Field 1 kilomefeet does not exist within table  
+>>> 
+... 
+... # create a function that takes a list as input and bufffers by that distance
+... 
+... def listBuffer(inputFile, listDistances, distUnit):
+... 	if distUnit.lower() != 'feet' or distUnit.lower() != 'miles' or distUnit.lower() != 'meters' or distUnit.lower() != 'kilometers':
+... 		print 'you need to go home and learn your measuremen tunits'
+... 	for i in listDistances:
+... 		bufferDist = str(i)+' '+distUnit
+... 		outputFile = inputFile.replace('.shp', '_'+str(i)+'.shp')
+... 		arcpy.Buffer_analysis(inputFile, outputFile, bufferDist)
+... 
+... 		# buffer the distance
+... 
+>>> listBuffer(inputFile, y, 'kilomefeet')
+you need to go home and learn your measuremen tunits
+Runtime error  Traceback (most recent call last):   File "<string>", line 1, in <module>   File "<string>", line 11, in listBuffer   File "c:\program files (x86)\arcgis\desktop10.4\arcpy\arcpy\analysis.py", line 692, in Buffer     raise e ExecuteError: ERROR 000728: Field 1 kilomefeet does not exist within table  
+>>> 
+... 
+... # create a function that takes a list as input and bufffers by that distance
+... 
+... def listBuffer(inputFile, listDistances, distUnit):
+... 	if distUnit.lower() != 'feet' or distUnit.lower() != 'miles' or distUnit.lower() != 'meters' or distUnit.lower() != 'kilometers':
+... 		print 'you need to go home and learn your measurement units'
+... 		print 'please use:'
+... 		print '    meters'
+... 		print '    kilometers'
+... 		print '    feet'
+... 		print '    miles'
+... 
+... 
+... 	for i in listDistances:
+... 		bufferDist = str(i)+' '+distUnit
+... 		outputFile = inputFile.replace('.shp', '_'+str(i)+'.shp')
+... 		arcpy.Buffer_analysis(inputFile, outputFile, bufferDist)
+... 
+... 		# buffer the distance
+... 
+>>> 
+>>> listBuffer(inputFile, y, 'kilomefeet')
+you need to go home and learn your measurement units
+please use:
+    meters
+    kilometers
+    feet
+    miles
+Runtime error  Traceback (most recent call last):   File "<string>", line 1, in <module>   File "<string>", line 18, in listBuffer   File "c:\program files (x86)\arcgis\desktop10.4\arcpy\arcpy\analysis.py", line 692, in Buffer     raise e ExecuteError: ERROR 000728: Field 1 kilomefeet does not exist within table  
+>>> # -*- coding: utf-8 -*-
+... # ---------------------------------------------------------------------------
+... # test.py
+... # Created on: 2017-11-04 13:02:44.00000
+... #   (generated by ArcGIS/ModelBuilder)
+... # Description: 
+... # ---------------------------------------------------------------------------
+... 
+... # Set the necessary product code
+... # import arcinfo
+... 
+... 
+... # Import arcpy module
+... import arcpy
+... 
+... 
+... x = [100, 200, 300]
+... 
+... # Local variables:
+... nybb_shp = "Y:\\GitHub\\pratt-savi-810-2017-10\\data\\nybb_17c\\nybb.shp"
+... 
+... for i in x: 
+... 
+... 	nybb_Buffer = "C:\\Users\\DanielMSheehan\\Documents\\ArcGIS\\Default.gdb\\nybb_Buffer" + '_' + str(i)
+... 	nybb_Buffer_Erase = "C:\\Users\\DanielMSheehan\\Documents\\ArcGIS\\Default.gdb\\nybb_Buffer_Erase" + '_' + str(i)
+... 
+... 	# Process: Buffer
+... 	arcpy.Buffer_analysis(nybb_shp, nybb_Buffer, str(i)+" Feet", "FULL", "ROUND", "NONE", "", "PLANAR")
+... 
+... 	# Process: Erase
+... 	arcpy.Erase_analysis(nybb_Buffer, nybb_shp, nybb_Buffer_Erase, "")
+... 
+>>> 
