@@ -6,6 +6,7 @@ This semester we'll be staying within the ArcGIS Pro Python environment so we do
 We'll be using Python 3.x as well. 
 
 **Microsoft Windows 10 90-Day Trial**
+
 https://answers.microsoft.com/en-us/windows/forum/windows_10-other_settings/how-can-i-download-windows-10-pro-trial-version/caad016a-1069-4a0e-958d-769e26192d62
 
 		
